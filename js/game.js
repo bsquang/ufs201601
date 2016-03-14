@@ -1,21 +1,5 @@
 var check = false;
 var next = 0;
-//var arrVoice = [];
-//var strSnd = [];
-//strSnd[0] = "sound/button_click.mp3";
-//arrVoice[0] = new Audio(strSnd[0]);
-//
-//strSnd[1] = "sound/true.mp3";
-//arrVoice[1] = new Audio(strSnd[1]);
-//
-//strSnd[2] = "sound/error.ogg";
-//arrVoice[2] = new Audio(strSnd[2]);
-//
-//strSnd[3] = "sound/done.mp3";
-//arrVoice[3] = new Audio(strSnd[3]);
-//
-//strSnd[4] = "sound/fail.mp3";
-//arrVoice[4] = new Audio(strSnd[4]);
 
 var clear_interval;
 var reload_time = 4500;
@@ -57,6 +41,7 @@ function play_snd_bg(){
   snd_bg.pause();
   snd_bg.currentTime = 0;
   snd_bg.play();
+  snd_bg.volume = 0.4;
   
   snd_bg.addEventListener('ended', function() {
       this.currentTime = 0;
@@ -65,6 +50,7 @@ function play_snd_bg(){
 }
 function stop_snd(name) {
   name.pause();
+  name.currentTime = 0;
 }
 function play_snd(type) {
     if (type == 3) {
@@ -125,6 +111,10 @@ function minPos(arr) {
 $(document).ready(function(){
   play_snd_start();
   
+  setTimeout(function(){
+    $('.btn-start-overlay').hide();
+  },1500)
+  
   $('.btn-start').click(function(){
     play_snd(3);
     stop_snd(snd_start);
@@ -135,7 +125,8 @@ $(document).ready(function(){
   
   $('.none').click(function(){
     play_snd(3);
-    
+    stop_snd(snd_choose_wrong);
+    stop_snd(snd_choose_right);
     if ($(this).hasClass('wrong')) {
       return;
     }
@@ -161,6 +152,10 @@ $(document).ready(function(){
   })
   $('.gift').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       winParticle();
+      
+      setTimeout(function(){
+        reload();
+      },reload_time)
   });
 })
 
@@ -180,14 +175,6 @@ function changePage(current) {
   $('.page').eq(current).fadeIn();
 }
 function checkArray() {
-  //if (checkArr[0] == 1 && checkArr[1] == 1 && checkArr[2] == 1
-  //    && checkArr[3] == 1 && checkArr[4] == 1
-  //    && checkArr[5] == 1 && checkArr[6] == 1
-  //    && checkArr[7] == 1 && checkArr[8] == 1
-  //    && checkArr[9] == 1 && checkArr[10] == 1
-  //    && checkArr[11] == 1 && checkArr[12] == 1
-  //    && checkArr[13] == 1 && checkArr[14] == 1
-  //    && checkArr[15] == 1 ) {
   stop_snd(snd_bg);
   if ($('.done').length >= 10) {
     endGame(1);
@@ -196,8 +183,7 @@ function checkArray() {
     endGame(2);
   }
   $('.endtime').hide();
-  $('.right-text').hide();
-  $('.vegetable_left').hide();
+  
 }
 
 function endGame(type) {
@@ -208,7 +194,7 @@ function endGame(type) {
     play_snd(7);
     
     setTimeout(function(){
-      reload();
+      changePage(20);
     },reload_time)
   }
   if (type == 2) {
@@ -283,6 +269,8 @@ var ans_data;
 function init_game() {
   $('.ans').click(function(){
     choose = true;
+    $('.ans').css({'-webkit-filter':'brightness(1)'});
+    $(this).css({'-webkit-filter':'brightness(0.5)'});
     
     play_snd(3);
     
