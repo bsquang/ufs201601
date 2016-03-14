@@ -109,6 +109,7 @@ function minPos(arr) {
 }
 
 $(document).ready(function(){
+  FastClick.attach(document.body);
   play_snd_start();
   
   setTimeout(function(){
