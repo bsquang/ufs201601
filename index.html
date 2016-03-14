@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+      <title>A-Q Game</title>
+      <meta charset="utf-8">
+      <link type="text/css" rel="stylesheet" href="css/css.css">
+      <link type="text/css" rel="stylesheet" href="css/animate.css">
+      <script src="js/jquery-2.1.4.min.js"></script>
+   </head>
+  <body>
+    <div class="btn-reload"></div>
+    <div class="endtime">
+      <p></p>
+    </div>
+    <img class="logo-white wow bounceInDown" src="img/new/logo_game.png" />
+    <img class="right-text wow bounceInDown" src="img/new/am-hieu-am-thuc-game.png" />
+    <img class="vegetable_left wow bounceInLeft" src="img/new/icon_rau-cu-qua.png" />
+    <div style="display: block" class="page startscreen">
+      
+      <div class="btn-start wow pulse infinite"></div>
+      <img id="logo-color" class="wow bounceInDown" src="img/new/logo.png" />
+      <img style="position: absolute;left: 170px;top: 125px" src="img/new/am-hieu-am-thuc.png" />
+      <img id="tag-line" class ="wow bounceInLeft" src="img/new/tag-line.png" />
+      <img id="cheft1" class="cheft wow slideInUp" data-wow-delay="1.5s" src="img/new/chef1.png" />
+      <img id="cheft2" class="cheft wow slideInUp" data-wow-delay="1.2s" src="img/new/chef2.png" />
+      <img id="cheft3" class="cheft wow slideInUp" data-wow-delay=".8s" src="img/new/chef3.png" />
+      <img id="cheft4" class="cheft wow slideInUp" data-wow-delay=".5s" src="img/new/chef4.png" />
+    </div>
+    <div class="page question-screen group">
+     <img class="none" id="question1" data-quest="1" src="img/new/question/1.png" />
+     <img class="none" id="question2" data-quest="2" src="img/new/question/2.png" />
+     <img class="none" id="question3" data-quest="3" src="img/new/question/3.png" />
+     <img class="none" id="question4" data-quest="4" src="img/new/question/4.png" />
+     <img class="none" id="question5" data-quest="5" src="img/new/question/5.png" />
+     <img class="none" id="question6" data-quest="6" src="img/new/question/6.png" />
+     <img class="none" id="question7" data-quest="7" src="img/new/question/7.png" />
+     <img class="none" id="question8" data-quest="8" src="img/new/question/8.png" />
+     <img class="none" id="question9" data-quest="9" src="img/new/question/9.png" />
+     <img class="none" id="question10" data-quest="10" src="img/new/question/10.png" />
+     <img class="none" id="question11" data-quest="11" src="img/new/question/11.png" />
+     <img class="none" id="question12" data-quest="12" src="img/new/question/12.png" />
+     <img class="none" id="question13" data-quest="13" src="img/new/question/13.png" />
+     <img class="none" id="question14" data-quest="14" src="img/new/question/14.png" />
+     <img class="none" id="question15" data-quest="15" src="img/new/question/15.png" />
+     <img class="none" id="question16" data-quest="16" src="img/new/question/16.png" />
+    </div>
+    <div class="btn-next"><img src="img/new/next.png"/></div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau1/q1.png" />
+     </div>
+     <img class="fix-pos food wow  pulse infinite" style="bottom: 190px" src="img/new/cau1/chicken.png">
+      <div class="answer_box" data="0">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn true">
+         <img src="img/new/cau1/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau1/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau1/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau1/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau2/q2.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau2/knorr-ga.png">
+      <div class="answer_box" data="1">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn true">
+         <img src="img/new/cau2/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau2/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau2/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau2/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau3/q3.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau3/knorr-ga.png">
+      <div class="answer_box" data="2">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn false">
+         <img src="img/new/cau3/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau3/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn true">
+         <img src="img/new/cau3/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau3/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau4/q4.png" />
+     </div>
+     <img class="food wow  pulse infinite" style="left: 80px" src="img/new/cau4/meat.png">
+      <div class="answer_box" data="3">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn true">
+         <img src="img/new/cau4/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau4/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau4/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau4/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau5/q5.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau5/knorr-heo.png">
+      <div class="answer_box" data="4">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn false">
+         <img src="img/new/cau5/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau5/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn true">
+         <img src="img/new/cau5/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau5/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau6/q6.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau6/knorr-heo.png">
+      <div class="answer_box" data="5">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn true">
+         <img src="img/new/cau6/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau6/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau6/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau6/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau7/q7.png" />
+     </div>
+     <img class="food wow  pulse infinite" style="left: 80px" src="img/new/cau7/meat.png">
+      <div class="answer_box" data="6">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn false">
+         <img src="img/new/cau7/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn true">
+         <img src="img/new/cau7/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau7/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau7/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau8/q8.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau8/knorr-bo.png">
+      <div class="answer_box" data="7">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn false">
+         <img src="img/new/cau8/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau8/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn true">
+         <img src="img/new/cau8/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau8/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau9/q9.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau9/knorr-bo.png">
+      <div class="answer_box" data="8">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn true">
+         <img src="img/new/cau9/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau9/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau9/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau9/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau10/q10.png" />
+     </div>
+     <img class="food wow  pulse infinite" style="bottom: 200px;left: 80px" src="img/new/cau10/knorr.png">
+      <div class="answer_box" data="9">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn false">
+         <img src="img/new/cau10/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn true">
+         <img src="img/new/cau10/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau10/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau10/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau11/q11.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau11/tom-yam.png">
+      <div class="answer_box" data="10">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn false">
+         <img src="img/new/cau11/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn true">
+         <img src="img/new/cau11/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau11/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau11/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau12/q12.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau12/knorr-p.png">
+      <div class="answer_box" data="11">
+       <div class="left-panel">
+        <div class="ans ans1 wow zoomIn true">
+         <img src="img/new/cau12/a.png"/>
+        </div>
+        <div class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau12/c.png"/>
+        </div>
+      </div>
+       <div class="right-panel">
+        <div class="ans ans3 wow zoomIn false">
+         <img src="img/new/cau12/b.png"/>
+        </div>
+        <div class="ans ans4 wow zoomIn false">
+         <img src="img/new/cau12/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau13/q13.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau13/knorr-lime.png">
+      <div class="answer_box" data="12">
+       <div class="left-panel">
+        <div class="ans text-size-30 ans1 wow zoomIn true">
+         <img src="img/new/cau13/a.png"/>
+        </div>
+        <div class="ans text-size-30 ans2 wow zoomIn false">
+         <img src="img/new/cau13/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans text-size-30 ans3 wow zoomIn false">
+         <img src="img/new/cau13/b.png"/>
+        </div>
+        <div class="ans text-size-30 ans4 wow zoomIn false">
+         <img src="img/new/cau13/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau14/q14.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau14/knorr-lime.png">
+      <div class="answer_box" data="13">
+       <div class="left-panel">
+        <div class="ans ans-margin ans1 wow zoomIn false">
+         <img src="img/new/cau14/a.png"/>
+        </div>
+        <div class="ans ans-margin ans2 wow zoomIn false">
+         <img src="img/new/cau14/b.png"/>
+        </div>
+        <div class="ans ans-margin ans3 wow zoomIn false">
+         <img src="img/new/cau14/c.png"/>
+        </div>
+       </div>
+       <div class="right-panel">
+        <div class="ans ans-2 ans4 wow zoomIn false">
+         <img src="img/new/cau14/d.png"/>
+        </div>
+        <div class="ans ans-2 ans5 wow zoomIn true">
+         <img src="img/new/cau14/e.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau15/q15.png" />
+     </div>
+     <img class="food wow  pulse infinite" style="bottom: 130px;" src="img/new/cau15/knorr-bxd.png">
+      <div class="answer_box" data="14">
+        <div style="margin: 0;width: 500px;" class="ans ans1 wow zoomIn true">
+         <img src="img/new/cau15/a.png"/>
+        </div>
+        <div style="margin: 0;width: 500px;" class="ans ans2 wow zoomIn false">
+         <img src="img/new/cau15/b.png"/>
+        </div>
+        <div style="margin: 0;width: 500px;" class="ans text-size-30 ans3 wow zoomIn false">
+         <img src="img/new/cau15/c.png"/>
+        </div>
+      </div>
+    </div>
+    <div class="page game">
+     <div class="question wow slideInRight">
+      <img src="img/new/cau16/q16.png" />
+     </div>
+     <img class="food wow  pulse infinite" src="img/new/cau16/knorr-lime.png">
+      <div class="answer_box" data="15">
+       <div class="left-panel">
+        <div class="ans ans1 text-size-30 wow zoomIn false">
+         <img src="img/new/cau16/a.png"/>
+        </div>
+        <div class="ans ans2 text-size-30 wow zoomIn false">
+         <img src="img/new/cau16/c.png"/>
+        </div>
+      </div>
+       <div class="right-panel">
+        <div class="ans ans3 text-size-30 wow zoomIn false">
+         <img src="img/new/cau16/b.png"/>
+        </div>
+        <div class="ans ans4 text-size-30 wow zoomIn true">
+         <img src="img/new/cau16/d.png"/>
+        </div>
+       </div>
+      </div>
+    </div>
+    
+    
+    <div class="page endGame win">
+     <img style="position: absolute;top:5px;right:5px;" class="wow slideInRight" src="img/new/icon_rau-cu-qua_top.png"/>
+     <img style="position: absolute;bottom:5px;left:5px;" class="wow slideInLeft" src="img/new/icon_rau-cu-qua.png"/>
+     <img class="logo-mid" src="img/new/win/am-hieu-am-thuc.png"/>
+     <img class="text-board wow tada" src="img/new/win/win.png"/>
+     <img class="gift wow bounceIn" data-wow-delay="1s" data-wow-duration=".3s" src="img/new/win/qua.png"/>
+    </div>
+    <div class="page endGame lose">
+     <img style="position: absolute;top:5px;right:5px;" class="wow slideInRight" src="img/new/icon_rau-cu-qua_top.png"/>
+     <img style="position: absolute;bottom:5px;left:5px;" class="wow slideInLeft" src="img/new/icon_rau-cu-qua.png"/>
+     <img class="logo-mid" src="img/new/win/am-hieu-am-thuc.png"/>
+     <img class="text-board wow tada" src="img/new/win/lose.png"/>
+    </div>
+    
+    <script src="js/wow.js"></script>
+    <script src="js/clickspark.js"></script>
+    <script>
+     new WOW().init();
+    </script>
+    <script src="js/game.js"></script>
+  </body>
+ </html>
