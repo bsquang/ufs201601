@@ -17,8 +17,8 @@ for(var i = 0; i < 16;i++){
   $('.none').eq(i)
 }
 
-var snd_start = new Audio("sound/QnA_start_sound.mp3");
-var snd_bg = new Audio("sound/QnA_background.mp3");
+var snd_start = new Audio("sound/BMG03.mp3");
+var snd_bg = new Audio("sound/BMG01.mp3");
 var snd_click = new Audio("sound/button_click.mp3");
 var snd_choose_wrong = new Audio("sound/choose_wrong.mp3");
 var snd_choose_right = new Audio("sound/QnA_right.mp3");
