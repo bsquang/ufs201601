@@ -3,7 +3,7 @@ var next = 0;
 
 var clear_interval;
 var reload_time = 4500;
-var time = 120;
+var time = 60;
 
 var countQuestion = $('.game').length;
 
@@ -152,7 +152,10 @@ $(document).ready(function(){
     reload();
   })
   $('.gift').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      winParticle();
+      setTimeout(function(){
+        $('.left-gift').addClass("tuarua");
+        $('.right-gift').addClass("tuarua");
+      },1000)
       
       setTimeout(function(){
         reload();
