@@ -52,7 +52,7 @@ body,html{
 .question-screen{
     z-index: 999999;
     position: absolute;
-    background: url("../img/start_screen.jpg") no-repeat;
+    background: url("../img/new/hidden.png") no-repeat;
     background-size: cover;
     left: 0;
     top: 0;
