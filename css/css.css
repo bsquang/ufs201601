@@ -255,9 +255,21 @@ body,html{
     box-shadow: none;
   }
 }
+@-webkit-keyframes flash{
+  0%{
+    box-shadow: none;
+  }
+  50%{
+    box-shadow: 0 0 20px 5px rgba(224,134,0,1);
+  }
+  100%{
+    box-shadow: none;
+  }
+}
 
 .flash{
   animation: flash 1s linear infinite;
+  -webkit-animation: flash 1s linear infinite;
 }
 
 .game .text-size-30 p{
@@ -306,9 +318,33 @@ body,html{
     animation-duration: .8s;
     animation-iteration-count: infinite;
     animation-play-state: running;
+    
+    -webkit-animation-name: tuarua;
+    -webkit-animation-duration: .8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
 }
 
 @keyframes tuarua{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+
+    }
+    50%{
+        opacity:  0.6;
+    }
+    75%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity:  0;
+    }
+}
+
+@-webkit-keyframes tuarua{
     0%{
         opacity: 0;
     }
