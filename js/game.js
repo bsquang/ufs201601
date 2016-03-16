@@ -116,7 +116,7 @@ $(document).ready(function(){
     $('.btn-start-overlay').hide();
   },1500)
   
-  $('.btn-start').click(function(){
+  $('.btn-start').bind('touchend',function(){
     play_snd(3);
     stop_snd(snd_start);
     changePage(1);
@@ -124,7 +124,7 @@ $(document).ready(function(){
     mosaicGrid('.question-screen','img');
   })
   
-  $('.none').click(function(){
+  $('.none').bind('touchend',function(){
     play_snd(3);
     stop_snd(snd_choose_wrong);
     stop_snd(snd_choose_right);
@@ -148,7 +148,7 @@ $(document).ready(function(){
   
   init_game();
   
-  $('.btn-reload').bind('click',function(){
+  $('.btn-reload').bind('touchend',function(){
     reload();
   })
   $('.gift').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -231,7 +231,7 @@ function reload() {
   window.location.reload();
 }
 
-$('.btn-next').click(function(){
+$('.btn-next').bind('touchend',function(){
   
   clearInterval(clear_interval);
   $(this).hide();
@@ -271,7 +271,7 @@ var choose = false;
 var answer_choose = false;
 var ans_data;
 function init_game() {
-  $('.ans').click(function(){
+  $('.ans').bind('touchend',function(){
     choose = true;
     $('.ans').css({'-webkit-filter':'brightness(1)'});
     $(this).css({'-webkit-filter':'brightness(0.5)'});
