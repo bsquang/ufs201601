@@ -3,7 +3,7 @@ var next = 0;
 
 var clear_interval;
 var reload_time = 4500;
-var time = 60;
+var time = 90;
 
 var countQuestion = $('.game').length;
 
@@ -27,9 +27,12 @@ var snd_congrat = new Audio("sound/QnA_congrat.mp3");
 var snd_lose = new Audio("sound/fail.mp3");
 
 function play_snd_start(){
-  snd_start.pause();
+ 
+ snd_start.pause();
+
   snd_start.currentTime = 0;
-  snd_start.play();
+ 
+ snd_start.play();
   
   snd_start.addEventListener('ended', function() {
       this.currentTime = 0;
@@ -111,13 +114,17 @@ function minPos(arr) {
 $(document).ready(function(){
   FastClick.attach(document.body);
   play_snd_start();
+ 
+
   
   setTimeout(function(){
     $('.btn-start-overlay').hide();
-  },1500)
+  },1500);
   
+ 
   $('.btn-start').bind('touchend',function(){
     play_snd(3);
+   
     stop_snd(snd_start);
     changePage(1);
     play_snd_bg();
@@ -125,6 +132,8 @@ $(document).ready(function(){
   })
   
   $('.none').bind('touchend',function(){
+    
+    alert("Hello! I am an alert box!!");
     play_snd(3);
     stop_snd(snd_choose_wrong);
     stop_snd(snd_choose_right);
