@@ -133,7 +133,6 @@ $(document).ready(function(){
   
   $('.none').bind('touchend',function(){
     
-    alert("Hello! I am an alert box!!");
     play_snd(3);
     stop_snd(snd_choose_wrong);
     stop_snd(snd_choose_right);
